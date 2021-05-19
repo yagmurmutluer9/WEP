@@ -9,7 +9,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity"
     tools:ignore="HardcodedText">
 
 
@@ -19,45 +18,9 @@
 
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit Profile"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"/>
-
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="10dp"
-            android:id="@+id/userMail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email Address" />
-
-        <EditText
-            android:id="@+id/editUserMail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress" />
-
-
-        <Button
-            android:id="@+id/updateBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Update" />
-
-
-    </LinearLayout>
-
+    <!--this the navigation view which draws
+        and shows the navigation drawer-->
+    <!--include the menu created in the menu folder-->
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
@@ -71,6 +34,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
+        <TextView
+            android:id="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="You can register and use app." />
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
